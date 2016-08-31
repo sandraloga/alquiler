@@ -10,8 +10,6 @@ public abstract class  Inmueble {
     private int id;
     private int distancia;
     private int maxPersonas;
-//    private int diaEntrada;
-//    private int diaSalida;
     public static int contadorInmuebles=1;
     ArrayList<Reserva> reservas;
     
@@ -20,8 +18,6 @@ public abstract class  Inmueble {
         this.id=id;
         this.distancia=distancia;
         this.maxPersonas=maxPersonas;
-//        this.diaEntrada=diaEntrada;
-//        this.diaSalida=diaSalida;
         this.reservas = new ArrayList<>();
         
     }
@@ -32,10 +28,7 @@ public abstract class  Inmueble {
         contadorInmuebles++;
         this.distancia= aleatorio.nextInt(101); //numero de 0 a 101
         this.maxPersonas=1 +aleatorio.nextInt(10); //numero entre 1 y 6
-//        this.diaEntrada= 1+aleatorio.nextInt(31);//entre 1 y 31
-//        this.diaSalida= 1+aleatorio.nextInt(31);//entre 1 y 31 
-        
-        
+        this.reservas = new ArrayList<>();
     }
     public int getId(){
         return this.id;

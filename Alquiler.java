@@ -28,27 +28,27 @@ public class Alquiler {
      * 
      * @param inmueble 
      */
-    public void addInmueble(Inmueble inmueble){
+    private void addInmueble(Inmueble inmueble){
        inmuebles.add(inmueble);
     }
     /**
      * 
      */
-    public void addCasa(){
+    private void addCasa(){
         Inmueble inmueble = new Casa();
         inmuebles.add(inmueble);
     }
     /**
      * 
      */
-    public void addCasaSuperlujo(){
+    private void addCasaSuperlujo(){
         Inmueble inmueble = new CasaSuperlujo();
         inmuebles.add(inmueble);
     }
     /**
      * 
      */
-    public void addPiso(){
+    private void addPiso(){
         Inmueble inmueble = new Piso();
         inmuebles.add(inmueble);
     }
@@ -57,7 +57,7 @@ public class Alquiler {
      * @param id
      * @return 
      */
-    public Inmueble getInmueble(int id){
+    private Inmueble getInmueble(int id){
        return inmuebles.get(id -1001);
     }
     /**
@@ -114,7 +114,7 @@ public class Alquiler {
      * @param fFin
      * @return 
      */
-    public boolean disponible(int id, int fInicio , int fFin){
+    private boolean disponible(int id, int fInicio , int fFin){
         boolean disponible = true;
         for (int i=fInicio; i< fFin; i++){
             if(disponible(id, i)==false){
@@ -170,7 +170,7 @@ public class Alquiler {
         }
     }
     
-    public boolean alquilable(int id, int fechaInicio , int fechaFin){
+    private boolean alquilable(int id, int fechaInicio , int fechaFin){
         boolean alquilable=true;
         Inmueble inmueble =null;
         inmueble=getInmueble(id);
